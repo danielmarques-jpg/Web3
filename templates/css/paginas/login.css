@@ -1,0 +1,136 @@
+/* Pagina de login e criar conta*/
+
+/* Fundo da página inteira */
+.body-login {
+  background-color: #e5e5e5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 480px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Cabeçalho*/
+.login-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.login-header img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+.login-header h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #000;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.login-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border: 1px solid #ccc;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #999;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  font-size: 1rem;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #009900;
+}
+
+.btn-verde {
+  width: 100%;
+  background-color: #009900;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.btn-verde:hover {
+  background-color: #007a00;
+}
+.divisor {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 25px 0;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.divisor::before,
+.divisor::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.divisor span {
+  padding: 0 15px;
+}
+
+/* Botão Continuar com Google */
+.btn-google {
+  width: 100%;
+  background-color: #d8dee3;
+  color: #000;
+  border: 1px solid #999;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.2s;
+}
+
+.btn-google:hover {
+  background-color: #cdd4da;
+}
+
+.btn-google img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
