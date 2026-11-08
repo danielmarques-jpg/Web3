@@ -76,9 +76,98 @@ function alternarAba(aba) {
 }
 
 
-/* 3) FORMULÁRIO: botão "Enviar" Por enquanto só leva para a tela de relatórios; quando houver backend,
+/* 3) FORMULARIO: botão "Enviar" Por enquanto só leva para a tela de relatorios; quando houver backend,
    é aqui que os dados do formulário devem ser enviados. */
 
-function mostrarRelatorio() {
-  window.location.href = 'relatorios.html';
-}
+document.addEventListener('DOMContentLoaded', () => {
+  const tbody = document.querySelector('.tabela-frequencia tbody');
+  if (!tbody) return;
+ 
+  const checkTodos = document.getElementById('check-todos');
+  const textoSelecionados = document.getElementById('texto-selecionados');
+  const btnPresentes = document.getElementById('btn-marcar-presentes');
+  const btnAusentes = document.getElementById('btn-marcar-ausentes');
+ 
+  const elTotal = document.getElementById('valor-total');
+  const elPresentes = document.getElementById('valor-presentes');
+  const elAusentes = document.getElementById('valor-ausentes');
+  const elTaxa = document.getElementById('valor-taxa');
+ 
+  const getLinhas = () => Array.from(tbody.querySelectorAll('tr'));
+  const getCheck = (tr) => tr.querySelector('input[type="checkbox"]');
+  const getBadge = (tr) => tr.querySelector('.badge');
+  const estaPresente = (tr) => getBadge(tr).classList.contains('badge-presente');
+ 
+  function definirStatus(tr, presente) {
+    const badge = getBadge(tr);
+    badge.classList.toggle('badge-presente', presente);
+    badge.classList.toggle('badge-ausente', !presente);
+    badge.textContent = presente ? 'Presente' : 'Ausente';
+  }
+ 
+  function atualizar() {
+    const linhas = getLinhas();
+    const selecionadas = linhas.filter((tr) => getCheck(tr).checked);
+ 
+    // destaque das linhas selecionadas
+    linhas.forEach((tr) => {
+      tr.classList.toggle('linha-selecionada', getCheck(tr).checked);
+    });
+ 
+    // texto da barra de ações
+    const n = selecionadas.length;
+    textoSelecionados.textContent =
+      n === 0 ? 'Nenhum aluno selecionado'
+      : n === 1 ? '1 aluno selecionado'
+      : `${n} alunos selecionados`;
+ 
+    // botões só ativos com seleção
+    btnPresentes.disabled = n === 0;
+    btnAusentes.disabled = n === 0;
+ 
+    // checkbox do cabeçalho (marcado, vazio ou indeterminado)
+    checkTodos.checked = linhas.length > 0 && n === linhas.length;
+    checkTodos.indeterminate = n > 0 && n < linhas.length;
+ 
+    // cartões de métricas, calculados a partir da tabela
+    const total = linhas.length;
+    const presentes = linhas.filter(estaPresente).length;
+    elTotal.textContent = total;
+    elPresentes.textContent = presentes;
+    elAusentes.textContent = total - presentes;
+    elTaxa.textContent = (total ? Math.round((presentes / total) * 100) : 0) + '%';
+  }
+ 
+  function marcarSelecionados(presente) {
+    getLinhas().forEach((tr) => {
+      const check = getCheck(tr);
+      if (check.checked) {
+        definirStatus(tr, presente);
+        check.checked = false; // limpa a seleção depois de marcar
+      }
+    });
+    atualizar();
+  }
+ 
+  // checkbox "selecionar todos"
+  checkTodos.addEventListener('change', () => {
+    getLinhas().forEach((tr) => {
+      getCheck(tr).checked = checkTodos.checked;
+    });
+    atualizar();
+  });
+ 
+  // clicar em qualquer ponto da linha alterna a seleção
+  tbody.addEventListener('click', (e) => {
+    const tr = e.target.closest('tr');
+    if (!tr) return;
+    const check = getCheck(tr);
+    if (e.target !== check) check.checked = !check.checked;
+    atualizar();
+  });
+ 
+  btnPresentes.addEventListener('click', () => marcarSelecionados(true));
+  btnAusentes.addEventListener('click', () => marcarSelecionados(false));
+ 
+  atualizar();
+});
