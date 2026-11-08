@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/paginas/configuracoes.css">
+  <title>Configurações</title>
+</head>
+<body data-pagina="configuracoes">
+
+  <div id="sidebar"></div>
+
+    <!--Area Principal-->
+    <main class="content">
+      
+      <div class="container-configuracoes">
+        
+        <!--Cabecalho-->
+        <div class="cabecalho-config">
+          <h1>Configurações</h1>
+          <p>Perfil, aparência e permissões de acesso.</p>
+        </div>
+
+        <!-- Grade dos Cartões-->
+        <div class="grid-configuracoes">
+          
+          <!--Meu Perfil -->
+          <div class="cartao-config">
+            <div class="titulo-cartao">
+              <img src="images/user-preto.png" alt="Usuário"> Meu perfil
+            </div>
+            
+            <div class="form-group-config">
+              <label>Nome:</label>
+              <input type="text" class="input-desativado" readonly>
+            </div>
+            
+            <div class="form-group-config">
+              <label>E-mail</label>
+              <input type="email" class="input-desativado" readonly>
+            </div>
+            
+            <div class="form-group-config">
+              <label>Função</label>
+              <div class="funcao-info">
+                <span class="badge-verde">Operador</span>
+                <span class="funcao-desc">Registra entradas e vendas próprias.</span>
+              </div>
+            </div>
+            
+            <button class="btn-salvar-perfil">
+              <img src="images/save-icon.png" alt="Salvar"> Salvar perfil
+            </button>
+          </div>
+
+          <!-- Cartão 2: Aparência e Acesso -->
+          <div class="cartao-config">
+            <div class="titulo-cartao">
+              <img src="images/gear-icon.png" alt="Engrenagem"> Aparência
+            </div>
+            
+            <p class="desc-apar">Escolha o tema de exibição do sistema.</p>
+            
+            <div class="tema-toggle">
+              <button class="btn-tema ativo"><img src="images/sun-icon.png" alt="Claro"> Claro</button>
+              <button class="btn-tema"><img src="images/moon-icon.png" alt="Escuro"> Escuro</button>
+            </div>
+
+            <div class="niveis-acesso">
+              <h3>Níveis de acesso</h3>
+              <p>
+                <strong>Administrador:</strong> Acesso total, inclusive gestão de usuário e papéis.<br>
+                <strong>Gerente:</strong> Gerencia cadastros, entradas, vendas e relatórios.<br>
+                <strong>Operador:</strong> Registra entradas e vendas próprias.<br>
+                <strong>Consulta:</strong> Somente leitura de dados e relatórios.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div> 
+    </main>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

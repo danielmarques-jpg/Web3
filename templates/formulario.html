@@ -3,54 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Home</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/paginas/formulario.css">
+  <title>Formulário de Inscrição</title>
 </head>
-<body>
+<body data-pagina="formulario">
 
-  <div class="dashboard">
+  <div id="sidebar"></div>
 
-    <!-- Sidebar/Barra lateral -->
-    <aside class="sidebar">
-      <img src="images/logo.png" width="280" alt="Logo">
-      <ul class="nav-links">
-        <li><a href="presenca.html"><img src="images/presenca.png" class="icones" alt="Presença"></a></li>
-        <li><a href="documentos.html"><img src="images/documentos.png" class="icones" alt="Documentos"></a></li>
-        <li><a href="alunos.html"><img src="images/alunos.png" class="icones" alt="Alunos"></a></li>
-        <li><a href="formulario.html"><img src="images/formulario.png" class="icones" alt="Formulário"></a></li>
-        <li><a href="configuracao.html"><img src="images/config.png" class="icones" alt="Configurações"></a></li>
-      </ul>
-
-      <div class="sidebar-footer">
-        
-        <div class="perfil-usuario">
-          <!-- O quadrado cinzento para a foto/avatar -->
-          <div class="avatar-placeholder"></div>
-          
-          <!-- Nome e Plano -->
-          <div class="info-usuario">
-            <span class="nome-usuario">Nome</span>
-            <span class="plano-usuario">Plano</span>
-          </div>
-        </div>
-
-        <!-- Botão Sair -->
-        <a href="#" class="btn-sair">
-          <img src="images/logout.png" alt="Sair" class="icone-sair">
-          <span>Sair</span>
-        </a>
-
-      </div>
-    </aside>
-
-    <!-- Área Principal (Empurrada 280px pelo CSS) -->
+    <!--Area Principal-->
     <main class="content">
       
-      <!-- Formulário -->
-      <div class="formulario-container">
+      <!--Formulário-->
+      <div class="formulario-container" id="tela-formulario">
         <div class="titulo">Formulário de Inscrição do Aluno</div>
 
-        <!--  INFORMAÇÕES GERAIS -->
+        <!--  INFORMACÕES GERAIS-->
         <div class="secao-titulo">INFORMAÇÕES GERAIS</div>
         <div class="caixa-cinza">
           <div class="linha">
@@ -95,7 +64,7 @@
           </div>
         </div>
 
-        <!--  QUESTIONÁRIO DE PRONTIDAO PARA ATIVIDADE FISICA -->
+        <!--QUESTIONÁRIO DE PRONTIDAO PARA ATIVIDADE FISICA-->
         <div class="secao-titulo">QUESTIONÁRIO DE PRONTIDÃO PARA ATIVIDADE FÍSICA (PARQ)</div>
         <div class="caixa-cinza">
           <ul class="lista-parq">
@@ -117,7 +86,7 @@
             <li>Usa medicação contínua? 
               <input type="radio" name="q6"> Sim <input type="radio" name="q6"> Não
             </li>
-            <li>Tratamento para pressão artificial? 
+            <li>Tratamento para pressão arterial? 
               <input type="radio" name="q7"> Sim <input type="radio" name="q7"> Não
             </li>
             <li>Alguma outra condição de saúde? 
@@ -126,17 +95,16 @@
           </ul>
         </div>
 
-        <!--  MODALIDADES -->
+        <!-- MODALIDADES-->
         <div class="secao-titulo">MODALIDADES</div>
         <div class="caixa-cinza grid-modalidades">
           
           <div class="coluna-esquerda bloco-modalidade">
             <div class="label-modalidade">Jiu-Jitsu ( ) Dias:</div>
             
-            <!-- Caixa branca com o ícone DENTRO -->
+            <!--Caixa branca com o icone-->
             <div class="caixa-com-icone">
             <img src="images/calendar.png" alt="Calendário" class="icone-dentro">
-            <!-- Corrigido: Apenas uma class -->
             <input type="text" class="input-sem-borda" placeholder="Selecione os dias*">
           </div>
           
@@ -145,17 +113,16 @@
         <div class="coluna-direita bloco-modalidade">
           <div class="label-modalidade">Horário:</div>
           
-          <!-- Caixa branca com o ícone DENTRO -->
+          <!--Caixa branca com o ícone DENTRO-->
           <div class="caixa-com-icone">
             <img src="images/clock.png" alt="Relógio" class="icone-dentro">
-            <!-- Corrigido: Apenas uma class e com o nome correto -->
-            <input type="text" class="input-sem-borda" placeholder="Selecione o horário*">
+              <input type="text" class="input-sem-borda" placeholder="Selecione o horário*">
           </div>
           
         </div>
           
         </div>
-        <!-- MOTIVO DA INSCRICAO -->
+        <!--MOTIVO DA INSCRICAO-->
         <div class="secao-titulo">MOTIVO DA INSCRIÇÃO</div>
         <div class="caixa-cinza radios-motivo">
           <label><input type="radio" name="motivo"> Melhorar a saúde</label>
@@ -167,7 +134,7 @@
           </label>
         </div>
 
-      <!--  OBSERVACOES -->
+      <!--OBSERVACOES-->
         <div class="secao-titulo">OBSERVAÇÕES</div>
         <div class="caixa-cinza">
           <div class="linha" style="margin-bottom: 5px;">
@@ -201,13 +168,13 @@
           </div>
         </div>
 
-        <!--  AUTORIZACAO / DECLARACAO -->
+        <!--AUTORIZACAO / DECLARACAO-->
         <div class="secao-titulo">AUTORIZAÇÃO / DECLARAÇÃO</div>
         <div class="caixa-cinza texto-declaracao">
           <p style="margin-top: 0; line-height: 1.8;">
             Eu, <input type="text" class="input-linha" style="width: 300px;">, portador(a) do RG 
             nº <input type="text" class="input-linha" style="width: 150px;">, CPF: <input type="text" class="input-linha" style="width: 150px;"> de acordo com o 
-            código civil, capítulo II, artigo 20, AUTORIZO a cessão de uso da minha imagem e voz ou o aluno(a) supracitado(a) em todo e qualquer material a ser utilizado em campanhas institucionais, bem como dados biométricos ou testes físicos que sejam esses destinados a divulgação ao público e/ao apenas para uso interno desta instituição, desde que não haja desvirtuamento da sua finalidade.<br>
+            código civil, capítulo II, artigo 20, AUTORIZO a cessão de uso da minha imagem e voz ou o aluno(a) supracitado(a) em todo e qualquer material a ser utilizado em campanhas institucionais, bem como dados biométricos ou testes físicos que sejam esses destinados a divulgação ao público e/ou apenas para uso interno desta instituição, desde que não haja desvirtuamento da sua finalidade.<br>
             Outrossim, DECLARO estar ciente da responsabilidade das informações acima citadas, especialmente as do item PARQ
           </p>
           <div class="linha" style="margin-top: 25px;">
@@ -222,14 +189,14 @@
           </div>
         </div>
         
-        <!-- Botao Enviar -->
-        <button class="btn-enviar">Enviar →</button>    
+        <!--Botao Enviar-->
+        <button class="btn-enviar" onclick="mostrarRelatorio()">Enviar →</button>
 
       </div> 
 
     </main>
 
-  </div> 
+  <script src="js/script.js"></script>
 
 </body>
 </html>

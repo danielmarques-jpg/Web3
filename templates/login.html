@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/paginas/login.css">
+  <title>Acesso ao Sistema</title>
+</head>
+<body class="body-login">
+
+  <div class="login-wrapper">
+    
+    <!-- Logotipo e titulo -->
+    <div class="login-header">
+      <img src="images/logo-fundoclaro.png" alt="Centro de Cidadania do Brasil">
+      <h2>Acesso ao sistema de gestão.</h2>
+    </div>
+
+    <!-- Cartão branco de login -->
+    <div class="login-card">
+      
+      <!-- Alternador entrar / criar Conta -->
+      <div class="toggle-pilula">
+        <button id="btn-tab-entrar" class="toggle-btn ativo" onclick="alternarAba('entrar')">Entrar</button>
+        <button id="btn-tab-criar" class="toggle-btn" onclick="alternarAba('criar')">Criar Conta</button>
+      </div>
+
+      <!-- Formulario -->
+      <form action="#" method="POST">
+        
+        <!-- Campo Nome -->
+        <div class="form-group" id="campo-nome" style="display: none;">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome">
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" name="senha" required>
+        </div>
+
+        <button type="submit" id="btn-submit" class="btn-verde">Entrar</button>
+
+      </form>
+
+      <!-- Divisoria -->
+      <div class="divisor">
+        <span>ou</span>
+      </div>
+
+      <!-- Botao Google -->
+      <button class="btn-google">
+        <img src="images/google-icon.png" alt="Google">
+        Continuar com Google
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
