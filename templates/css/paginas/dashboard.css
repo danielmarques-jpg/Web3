@@ -1,0 +1,277 @@
+.container-dashboard-main {
+  padding: 40px 50px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+/* Cabeçalho */
+.cabecalho-dash h1 {
+  font-size: 2rem;
+  color: #1a56db;
+  margin: 0 0 8px 0;
+}
+
+.cabecalho-dash p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0 0 30px 0;
+}
+
+/* Banner de Atenção */
+.banner-atencao {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.tag-azul {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #1a56db;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.tag-azul img { width: 14px; }
+
+.banner-texto h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.8rem;
+  color: #000;
+}
+
+.banner-texto p {
+  margin: 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Gráfico Circular Donut com CSS puro */
+.grafico-circular {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(#16a34a 87%, #e5e7eb 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grafico-centro {
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.perc {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: -2px;
+}
+.perc-label {
+  font-size: 0.6rem;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Grade 4 Cartões */
+.grid-4-cartoes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.cartao-dash {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cartões clicáveis*/
+a.cartao-dash {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+a.cartao-dash:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.10);
+}
+
+.cartao-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.icone-box-pequeno {
+  width: 35px;
+  height: 35px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icone-box-pequeno img { width: 18px; }
+
+.azul-claro { background-color: #dbeafe; }
+.azul-escuro { background-color: #bfdbfe; }
+.laranja { background-color: #ffedd5; }
+
+.seta-canto {
+  color: #999;
+  font-size: 1.2rem;
+}
+
+.label-cartao {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.cartao-dash h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.cartao-dash p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/*secao inferior */
+.grid-inferior-dash {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.topo-seccao {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 15px;
+}
+.topo-seccao h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #333;
+}
+.link-azul {
+  color: #1a56db;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Lista de Vencimentos */
+.lista-vencimentos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item-vencimento {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.icone-vencimento {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+.icone-vencimento img { width: 20px; }
+
+.fundo-vermelho { background-color: #fee2e2; }
+.fundo-laranja { background-color: #ffedd5; }
+.fundo-azul { background-color: #dbeafe; }
+
+.texto-vencimento {
+  flex-grow: 1;
+}
+.texto-vencimento h4 {
+  margin: 0 0 4px 0;
+  font-size: 1rem;
+  color: #000;
+}
+.texto-vencimento p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Cartão Resumo */
+.cartao-resumo {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.titulo-resumo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.titulo-resumo img { width: 20px; }
+.titulo-resumo h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #000;
+}
+
+/* Barra de Progresso*/
+.barra-progresso-fundo {
+  width: 100%;
+  height: 8px;
+  background-color: #bae6fd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.barra-progresso-preenchimento {
+  height: 100%;
+  background-color: #16a34a;
+  border-radius: 4px;
+}
+
+.desc-resumo {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #555;
+}
