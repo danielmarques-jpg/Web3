@@ -47,7 +47,7 @@
   align-items: center;
   justify-content: center;
 }
-.icone-box img { width: 24px; height: 24px; object-fit: contain; }
+.icone-box img { width: 35px; height: 35px; object-fit: contain; }
 .simbolo-percent { color: #fff; font-size: 1.5rem; font-weight: bold; }
 
 .card-label {
@@ -177,4 +177,49 @@
 
 .badge-ausente {
   background-color: #ef4444;
+}
+
+/* Rolagem da tabela: cabecalho fixo, linhas rolam */
+.tabela-scroll {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.tabela-frequencia thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #ffffff;
+}
+
+.tabela-frequencia tbody tr {
+  cursor: pointer;
+}
+
+.tabela-frequencia tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.tabela-frequencia tbody tr.linha-selecionada:hover {
+  background-color: #ede9fe;
+}
+
+/* Botões de ação desativados quando nada está selecionado */
+.btn-acao-verde:disabled,
+.btn-acao-vermelho:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Checkbox "selecionar todos" ao lado do contador */
+.selecao-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.selecao-info input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
 }
