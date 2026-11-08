@@ -1,0 +1,156 @@
+
+
+.container-relatorios {
+  padding: 50px 60px;
+  width: 100%;               
+  max-width: none;           
+  box-sizing: border-box;    
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Cabeçalho */
+.cabecalho-relatorios h1 {
+  font-size: 2.5rem;
+  margin: 0 0 15px 0;
+  font-weight: bold;
+}
+
+.cabecalho-relatorios p {
+  font-size: 1.1rem;
+  margin: 0 0 45px 0;
+  color: #333;
+}
+
+
+.caixa-relatorios {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 12px;
+  padding: 35px 40px;
+  margin-bottom: 35px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  width: 100%;               
+  box-sizing: border-box;
+}
+
+.titulo-caixa {
+  font-size: 1.2rem; 
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.grid-filtros {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.item-filtro {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-filtro label {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.select-filtro {
+  padding: 14px;
+  border: 1px solid #999;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  outline: none;
+  background-color: #fff;
+  cursor: pointer;
+  width: 100%;               
+  box-sizing: border-box;
+}
+
+.ajuda-filtro {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+.grid-exportacao {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* Cartões de PDF e excel */
+.cartao-exportacao {
+  border: 1px solid #cccccc;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+  background-color: #ffffff;
+}
+
+/* Caixas dos ícones com fundo colorido */
+.icone-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icone-box img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+/* Cores específicas para PDF e Excel */
+.icone-pdf {
+  background-color: #ffcccc; 
+}
+
+.icone-excel {
+  background-color: #ccffcc; 
+}
+
+/* Conteúdo de texto ao lado do ícone */
+.conteudo-exportacao {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.conteudo-exportacao h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+}
+
+.conteudo-exportacao p {
+  margin: 0 0 25px 0;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+/* Botão de exportar */
+.btn-exportar {
+  background-color: transparent;
+  border: 1px solid #777;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-start; 
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-exportar:hover {
+  background-color: #f5f5f5;
+  border-color: #333;
+}
