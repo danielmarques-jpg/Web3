@@ -73,6 +73,7 @@ CREATE TABLE frequencias (
     REFERENCES inscricoes(id)
 );
 
+
 CREATE TABLE arquivos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome_original VARCHAR(255) NOT NULL,
